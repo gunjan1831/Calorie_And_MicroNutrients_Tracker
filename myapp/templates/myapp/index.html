@@ -47,7 +47,7 @@
            </div>
        </div>
        <div class="row">
-           <div class="col-md-6">
+           <div class="col-md-7">
                <div>
                    <h4>
                        Today's Consumption!
@@ -60,6 +60,7 @@
                        <th>Fats (gm)</th>
                        <th>Protein (gm)</th>
                        <th>Calories (Kcal)</th>
+                       <th>Remove Item</th>
 
                   </tr>
                    {% for c in consumed_food %}
@@ -69,6 +70,8 @@
                        <td>{{ c.food_consumed.fats }}</td>
                        <td>{{ c.food_consumed.protein }}</td>
                        <td>{{ c.food_consumed.calories}}</td>
+                       <td><a class="btn btn-danger" href="{% url 'delete' c.id %}">Remove</a></td>
+
                    </tr>
                    {% endfor %}
 
@@ -149,9 +152,9 @@
             label: '# of Votes',
             data: [carbsP, fatsP, proteinP],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
 
             ],
             borderColor: [
