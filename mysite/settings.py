@@ -26,7 +26,7 @@ SECRET_KEY = '7uw)*lv8@ao(2)q4k#!sq13+rm76$4soc28zfbx$-u-j(^3fg3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['calorie-tracky.herokuapp.com']
 
 
 # Application definition
